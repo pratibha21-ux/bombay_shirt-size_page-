@@ -1,0 +1,333 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 10;
+  right: 0;
+  bottom: 0;
+background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+ 
+}
+
+ .modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 580px;
+  width: 100%;
+  color: gray;
+  box-shadow: 1px 2px 0px rgba(226, 217, 217, 0.1);
+  position: relative;
+  max-height: 100vh; 
+  overflow-y: auto;
+} 
+
+
+.close-button {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background: white;
+  /* border: none; */
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+  /* padding: 30px; */
+}
+h1{
+  color: #000;
+} 
+
+ p {
+  font-weight: 500;
+  font-size: medium;
+  color: #868181;
+} 
+
+ .heading {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: flex;
+} 
+
+.heading .Upper{
+  margin-top: 2px;
+  margin-left: 300px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: flex;
+  color: blue; 
+}
+.heading .Lower{
+  margin-top: 2px;
+  margin-left: 300px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: flex;
+  color: blue;
+} 
+.heading .Height{
+  margin-top: 2px;
+  margin-left: 380px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: flex;
+  color: blue;
+}
+.heading .Shirt{
+  margin-top: 2px;
+  margin-left: 360px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: flex;
+  color: blue;
+}
+.heading .Shoulder{
+  margin-top: 2px;
+  margin-left: 330px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: flex;
+  color: blue;
+}
+.heading .Preferred{
+  margin-top: 2px;
+  margin-left: 300px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: flex;
+  color: blue;
+}
+.option-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  /* background: #f0eaea; */
+  
+} 
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  background: white;
+  border: 2px solid rgb(247, 243, 243);
+} 
+
+.option img {
+  width: 150px;
+  max-width: 150px;
+  border: 2px solid rgb(211, 208, 208);
+  border-radius: 4px;
+ 
+   height: 150px;
+  margin-left: 15px; 
+  background: white;
+}
+
+.option.selected img {
+  border-color: rgb(0, 0, 0);
+  background: gray; 
+}
+.height, .shirt {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.height button, .shirt button {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: rgb(3, 3, 3);
+  border-radius: 100px;
+  padding: 5px 10px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+
+}
+
+.height button.selected, .shirt button.selected {
+  border-color:gray;
+  background: rgb(0, 0, 0);
+  color: white;
+}
+.button .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff; /* Default color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button .btn.active {
+  background-color: #000000; /* Color when all questions are answered */
+}
+
+.button .btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button.btn {
+  background: grey;
+  color: #fafafa;
+   padding: 10px 20px;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 12px;
+  height: 55px;
+  width: 100%; 
+  color: #fafafa;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  
+  overflow: hidden;
+}
+
+button.btn.active {
+  background: black;
+  color: #fafafa;
+ 
+}
+button .btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: -1;
+  transition: transform 0.5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  transform: scaleX(0); 
+} 
+
+button .btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  color: #e0e0e0;
+  background-color: rgb(244, 245, 240);
+  z-index: -1;
+  border-radius: 12px;
+  transform: scale(0, 1);
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+button.btn:hover {
+  background: #000;
+  color: #fcf4f4;
+}
+
+button.btn:hover::after {
+  transform: scale(1, 1);
+}
+
+button.btn:focus {
+  outline: none;           
+} 
+
+
+.progress-bar {
+  height: 10px;
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: green;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.edit-button {
+  margin-left: 10px;
+  background: black;
+  border: none;
+  color: rgb(28, 116, 216);
+  cursor: pointer;
+}
+
+.bodyShape{
+  background: #000;
+}
+@media (max-width: 1200px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 992px) {
+  .modal-content {
+    padding: 15px;
+  }
+
+  .option img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .height button, .shirt button {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 90%;
+  }
+
+  .option-group {
+    flex-direction: column;
+  }
+
+  .height button, .shirt button {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .option img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .height button, .shirt button {
+    height: 30px;
+    width: 30px;
+  }
+}
